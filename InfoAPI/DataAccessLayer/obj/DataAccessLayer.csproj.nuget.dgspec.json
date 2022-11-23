@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Software\\WebAppInfoNet\\InfoAPI\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\DataAccessLayer\\DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Software\\WebAppInfoNet\\InfoAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Software\\WebAppInfoNet\\InfoAPI\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Software\\WebAppInfoNet\\InfoAPI\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Software\\WebAppInfoNet\\InfoAPI\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

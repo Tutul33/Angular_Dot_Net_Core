@@ -10,3 +10,15 @@ C:\Software\WebAppInfoNet\InfoAPI\Domains\obj\Debug\net5.0\Domains.csproj.CoreCo
 C:\Software\WebAppInfoNet\InfoAPI\Domains\obj\Debug\net5.0\Domains.dll
 C:\Software\WebAppInfoNet\InfoAPI\Domains\obj\Debug\net5.0\ref\Domains.dll
 C:\Software\WebAppInfoNet\InfoAPI\Domains\obj\Debug\net5.0\Domains.pdb
+C:\Software\WebAppInfoNet\InfonetAssociateLtd\InfoAPI\Domains\bin\Debug\net5.0\Domains.deps.json
+C:\Software\WebAppInfoNet\InfonetAssociateLtd\InfoAPI\Domains\bin\Debug\net5.0\Domains.dll
+C:\Software\WebAppInfoNet\InfonetAssociateLtd\InfoAPI\Domains\bin\Debug\net5.0\ref\Domains.dll
+C:\Software\WebAppInfoNet\InfonetAssociateLtd\InfoAPI\Domains\bin\Debug\net5.0\Domains.pdb
+C:\Software\WebAppInfoNet\InfonetAssociateLtd\InfoAPI\Domains\obj\Debug\net5.0\Domains.csproj.AssemblyReference.cache
+C:\Software\WebAppInfoNet\InfonetAssociateLtd\InfoAPI\Domains\obj\Debug\net5.0\Domains.GeneratedMSBuildEditorConfig.editorconfig
+C:\Software\WebAppInfoNet\InfonetAssociateLtd\InfoAPI\Domains\obj\Debug\net5.0\Domains.AssemblyInfoInputs.cache
+C:\Software\WebAppInfoNet\InfonetAssociateLtd\InfoAPI\Domains\obj\Debug\net5.0\Domains.AssemblyInfo.cs
+C:\Software\WebAppInfoNet\InfonetAssociateLtd\InfoAPI\Domains\obj\Debug\net5.0\Domains.csproj.CoreCompileInputs.cache
+C:\Software\WebAppInfoNet\InfonetAssociateLtd\InfoAPI\Domains\obj\Debug\net5.0\Domains.dll
+C:\Software\WebAppInfoNet\InfonetAssociateLtd\InfoAPI\Domains\obj\Debug\net5.0\ref\Domains.dll
+C:\Software\WebAppInfoNet\InfonetAssociateLtd\InfoAPI\Domains\obj\Debug\net5.0\Domains.pdb

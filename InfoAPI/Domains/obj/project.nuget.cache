@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y3V5kAbQUsGQKO+24FBw2b2rsgukiIN/aBYITt2Z0RqVIy/lfB/ObUsQEmUOd0owe5MfVnM8PmcNJ9/kibtuIA==",
+  "dgSpecHash": "0PJUvbgZIh690HVPrIQIB1Mg6VN/GVOyMzok40HZaLMZVy3Ytx7JRLepP+wwwiMeWEj6vgrBtYGaSaHg4RME6Q==",
   "success": true,
-  "projectFilePath": "C:\\Software\\WebAppInfoNet\\InfoAPI\\Domains\\Domains.csproj",
+  "projectFilePath": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\Domains\\Domains.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

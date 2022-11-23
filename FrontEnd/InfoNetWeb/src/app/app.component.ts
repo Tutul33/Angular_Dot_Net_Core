@@ -11,6 +11,7 @@ export class AppComponent {
   }
 
   public open(modal: any): void {
+    //Testing
     this.modalService.open(modal);
   }
 }

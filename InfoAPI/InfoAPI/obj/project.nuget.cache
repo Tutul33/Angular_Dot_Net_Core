@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "od6or+nO0Niv7SAynr2uHYKxWW21edSCsf33ib1gQqIz8rKGPdXypcSPUh+5hX3SQuJV8ce1w24BL07moEYTKA==",
+  "dgSpecHash": "Dew1KucSE2u7j/vSV5TJayn6C7viBloVbZ6LRkz5JI0AAXflbFXjLGAxgba2yYjl6WXpFEvhcaSH0oqajhPcSg==",
   "success": true,
-  "projectFilePath": "C:\\Software\\WebAppInfoNet\\InfoAPI\\InfoAPI\\InfoAPI.csproj",
+  "projectFilePath": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\InfoAPI\\InfoAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

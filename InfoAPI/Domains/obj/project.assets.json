@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Software\\WebAppInfoNet\\InfoAPI\\Domains\\Domains.csproj",
+      "projectUniqueName": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\Domains\\Domains.csproj",
       "projectName": "Domains",
-      "projectPath": "C:\\Software\\WebAppInfoNet\\InfoAPI\\Domains\\Domains.csproj",
+      "projectPath": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\Domains\\Domains.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Software\\WebAppInfoNet\\InfoAPI\\Domains\\obj\\",
+      "outputPath": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\Domains\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

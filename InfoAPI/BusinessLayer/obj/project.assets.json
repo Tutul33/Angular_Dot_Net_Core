@@ -5702,11 +5702,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Software\\WebAppInfoNet\\InfoAPI\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Software\\WebAppInfoNet\\InfoAPI\\BusinessLayer\\BusinessLayer.csproj",
+      "projectPath": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\BusinessLayer\\BusinessLayer.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Software\\WebAppInfoNet\\InfoAPI\\BusinessLayer\\obj\\",
+      "outputPath": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5726,11 +5726,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Software\\WebAppInfoNet\\InfoAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Software\\WebAppInfoNet\\InfoAPI\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\DataAccessLayer\\DataAccessLayer.csproj"
             },
-            "C:\\Software\\WebAppInfoNet\\InfoAPI\\Domains\\Domains.csproj": {
-              "projectPath": "C:\\Software\\WebAppInfoNet\\InfoAPI\\Domains\\Domains.csproj"
+            "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\Domains\\Domains.csproj": {
+              "projectPath": "C:\\Software\\WebAppInfoNet\\InfonetAssociateLtd\\InfoAPI\\Domains\\Domains.csproj"
             }
           }
         }
