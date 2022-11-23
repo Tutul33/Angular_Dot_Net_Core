@@ -218,10 +218,11 @@ setPagingToGetAll(page: number, isPaging: boolean) {
             this.res = response;
             if (this.res.resdata.isSuccess) {                
                 this.active='list';
+                this.toastr.success(this.res.resdata.message,'Success!');
                 this.loadPersonalInfo(0,true);
             }
             else {
-                
+              this.toastr.error(this.res.resdata.message,'Failed!');
             }
         }, error => {           
             console.log(error);
@@ -243,7 +244,7 @@ setPagingToGetAll(page: number, isPaging: boolean) {
   onSubmit(){
     
    if(!this.validateSkill()){
-       this.skillValidationMesg='Please select at least on skill.';
+       this.toastr.warning('Please select at least one skill.','Warning!');
    }else{
     this.skillValidationMesg='';
    }
@@ -342,7 +343,7 @@ onCheckSkillChange(e:any,item:any){
     this.languageSkilList.splice(this.languageSkilList.indexOf(skill), 1);
     }
     if(!this.validateSkill()){
-       this.skillValidationMesg='Please select at least one skill.';
+       this.toastr.warning('Please select at least one skill.','Warning!');
     }else{
       this.skillValidationMesg = '';
     }
@@ -373,10 +374,11 @@ onFileChanges(event:any) {
           var fileIndex = this.fileTypes.indexOf(extlwr);
           var fileSize = file.size / 1024 / 1024; // in MB
           if (fileSize > 4) {
-              this.errorMsg= 'File size exceeds 4 MB';
-
+              let msg= 'File size exceeds 4 MB';
+              this.toastr.warning(msg,'Warning!');
           } else if (fileIndex === -1) {
-              this.errorMsg= 'File type not supported. Valid file types are ' + this.fileTypes;
+              let msg= 'File type not supported. Valid file types are ' + this.fileTypes;
+              this.toastr.warning(msg,'Warning!');
           } else {            
             this.errorMsg='';
               var fileData = {
@@ -389,8 +391,8 @@ onFileChanges(event:any) {
           }
       }
 
-      if (nFile !== event.target.files.length) {
-        this.errorMsg= 'Invalid file';
+      if (nFile !== event.target.files.length) {        
+        this.toastr.warning('Invalid file','Warning!');
       }
   }
 }
