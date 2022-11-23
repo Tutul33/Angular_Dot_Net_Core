@@ -9,10 +9,10 @@
   1. Angular - 14.1.0
   2. @angular/cli - 14.1.3
 # Database
-  SQL Server Management Studio						          15.0.18424.0
-  SQL Server Management Objects (SMO)						    16.100.47021.0+7eef34a564af48c5b0cf0d617a65fd77f06c3eb1
-  Microsoft Analysis Services Client Tools					15.0.19750.0
-  Microsoft Data Access Components (MDAC)						10.0.14393.0
-  Microsoft MSXML					                        	3.0 6.0 
-  Microsoft .NET Framework						              4.0.30319.42000
-  Operating System						                      10.0.14393
+  1. SQL Server Management Studio						          15.0.18424.0
+  2. SQL Server Management Objects (SMO)						    16.100.47021.0+7eef34a564af48c5b0cf0d617a65fd77f06c3eb1
+  3. Microsoft Analysis Services Client Tools					15.0.19750.0
+  4. Microsoft Data Access Components (MDAC)						10.0.14393.0
+  5. Microsoft MSXML					                        	3.0 6.0 
+  6. Microsoft .NET Framework						              4.0.30319.42000
+  7. Operating System						                      10.0.14393
