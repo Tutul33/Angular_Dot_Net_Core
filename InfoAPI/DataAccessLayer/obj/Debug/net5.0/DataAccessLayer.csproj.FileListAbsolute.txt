@@ -1,0 +1,12 @@
+C:\Software\WebAppInfoNet\InfoAPI\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
+C:\Software\WebAppInfoNet\InfoAPI\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
+C:\Software\WebAppInfoNet\InfoAPI\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Software\WebAppInfoNet\InfoAPI\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+C:\Software\WebAppInfoNet\InfoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Software\WebAppInfoNet\InfoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Software\WebAppInfoNet\InfoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Software\WebAppInfoNet\InfoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
+C:\Software\WebAppInfoNet\InfoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Software\WebAppInfoNet\InfoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
+C:\Software\WebAppInfoNet\InfoAPI\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Software\WebAppInfoNet\InfoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb

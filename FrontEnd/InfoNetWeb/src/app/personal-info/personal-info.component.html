@@ -1,0 +1,244 @@
+
+<div class="d-flex">
+	<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+		<li ngbNavItem="list" (click)="loadPersonalInfo(0,true)">
+			<a ngbNavLink>Personal Info List</a>
+			<ng-template ngbNavContent>
+				<div class="row">
+                    <div class="col-xs-12 col-12">
+                        <span class="text-primary" ><i class="fa fa-list text-primary"></i><b>&nbsp;List</b></span>
+                    </div>
+                    <div class="mt-3 col-xs-12 col-sm-12 col-sm-12 col-md-6">
+                        <div>
+                            <label>
+                                Show <select  name="pageSize" [(ngModel)]="pageSize" (change)="setPagingToGetAll(1,true)">
+                                    <option *ngFor="let ps of pageSizeList" value={{ps}}>
+                                        {{ps}}
+                                    </option>
+                                </select> entries
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div style="float:right">
+                            <label><input type="search" class="form-control" placeholder="Search here" [(ngModel)]="searchname"></label>
+                            <label> <button id="btnSearch" class="btn btn-outline-success" style="margin-bottom: 0.3rem;" (click)="loadPersonalInfo(0,true)">Search</button> </label>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-12 mt-1">                   
+                            <div class="table-responsive" style="max-height:480px; overflow-x:auto;">
+                                <table class="table table-xs table-hover" style="border-collapse:collapse">
+                                    <thead>
+                                        <tr class="back-color-head">
+                                            <th class="fixed-header">Name</th>
+                                            <th class="fixed-header">Contry</th>
+                                            <th class="fixed-header">City</th>
+                                            <th class="fixed-header">Language Skills</th>
+                                            <th class="fixed-header">Resume</th>
+                                            <th class="fixed-header">Date Of Birth</th>
+                                            <th class="fixed-header"><span class="pull-right">Action</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of listPersonalInfo;let sl = index">
+                                            <td>
+                                                {{item.fullName}}
+                                            </td>
+                                            <td>{{item.countryName}}</td>
+                                            <td>{{item.cityName}}</td>
+                                            <td>
+                                                {{item==undefined?'':showCommaSeparatedSkills(item)}}
+                                            </td>
+                                            <td>                                                
+                                                <ul *ngFor="let itemAttach of item.attachments;let sl2 = index">
+                                                    <li>
+                                                        <a href="javaScript:void(0);" (click)="download(itemAttach)"><i class="fa fa-download" aria-hidden="true"></i> {{sl2+1}}. {{itemAttach.fileName}}</a>
+                                                    </li>
+                                                </ul>
+                                               
+                                            </td>
+                                            <td>
+                                                {{item.dateOfBirth | date:'MM/dd/yyyy'}}
+                                            </td>                                            
+                                            <td>
+                                               <button id="personalInfo_View_{{sl}}" class="btn btn-sm btn-primary m-1" (click)="openModal($event,item,infoModal)"><i class="fa fa-eye"></i></button>
+                                               <button id="personalInfo_Edit_{{sl}}" class="btn btn-sm btn-info m-1" (click)="edit($event,item)"><i class="fa fa-edit"></i></button>
+                                               <button id="personalInfo_Delete_{{sl}}" class="btn btn-sm btn-danger m-1" (click)="deleteConfirmModal($event,item,confirmModal)"><i class="fa fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot *ngIf="listPersonalInfo.length===0" class="text-center text-c-red">
+                                        <tr>
+                                            <th colspan="7">No data found..!</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div> 
+                    </div>
+                    
+                     <div class="col-xs-12 col-12" *ngIf="listPersonalInfo.length != 0">
+                            <div class="pull-left ">
+                                <span class="well well-sm">Showing  <span class="text-success"><b>{{pageStart}}</b></span> to <span class="text-success"><b>{{pageEnd}}</b></span> of <span class="text-success"><b>{{totalRows}}</b></span> entries</span>
+                            </div>
+                            <div class="pull-right">
+                                <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+                                    <li>
+                                        <a class="btn btn-sm btn-outline-secondary" [ngClass]="{disabled:pager.currentPage === 1}" [routerLink]="" (click)="setPagingToGetAll(1,true)"><i class="fa fa-angle-double-left" aria-hidden="true"></i>Start</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-sm btn-outline-info" [ngClass]="{disabled:pager.currentPage === 1}" [routerLink]="" (click)="setPagingToGetAll(pager.currentPage - 1,true)"><i class="fa fa-angle-left" aria-hidden="true"></i>Previous</a>
+                                    </li>
+                                    <li *ngFor="let page of pager.pages">
+                                        <a class="btn btn-sm btn-outline-secondary" [ngClass]="{active:pager.currentPage === page}" [routerLink]="" (click)="setPagingToGetAll(page,true)">{{page}}</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-sm btn-outline-info" [ngClass]="{disabled:pager.currentPage === pager.totalPages}" [routerLink]="" (click)="setPagingToGetAll(pager.currentPage + 1,true)"><i class="fa fa-angle-right" aria-hidden="true"></i>Next</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-sm btn-outline-secondary" [ngClass]="{disabled:pager.currentPage === pager.totalPages}" [routerLink]="" (click)="setPagingToGetAll(pager.totalPages,true)"><i class="fa fa-angle-double-right" aria-hidden="true"></i>End</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                   
+                 </div>
+			</ng-template>
+		</li>
+		<li ngbNavItem="entry">
+			<a ngbNavLink (click)="reset()">Personal Info Entry</a>
+			<ng-template ngbNavContent>
+			 <div class="row">
+                <div class="col-md-12">
+                    <span class="text-success" *ngIf="!isEdit"><i class="fa fa-tasks text-info"></i><b>&nbsp;New Entry</b></span>
+                    <span class="text-primary" *ngIf="isEdit"><i class="fa fa-edit text-primary"></i><b>&nbsp;Update Entry</b></span>
+                </div>
+                <div class="col-md-12">
+                    <form id="pForm" class="form-material" [formGroup]="pInfoForm" #f="ngForm">
+                        <div class="mb-3">
+                            <label for="fullName">Name<em class="text-danger">*</em>:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control"  formControlName="fullName" required id="fullName">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Country">Country<em class="text-danger">*</em>:</label>
+                            <div class="input-group">
+                                <select id="countryId" name="countryId" formControlName="countryId" (change)="onCountryChange($event)" class="form-control">
+                                    <option value="0">--Select country--</option>
+                                    <option *ngFor="let c of listCountry" value={{c.countryId}}>
+                                        {{c.countryName}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="City">City<em class="text-danger">*</em>:</label>
+                            <div class="input-group">
+                                <select id="cityId" name="cityId" formControlName="cityId" class="form-control">
+                                    <option value="0">--Select City--</option>
+                                    <option *ngFor="let c of listCity" value={{c.cityId}}>
+                                        {{c.cityName}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="text-danger" *ngIf="skillValidationMesg!=''">{{skillValidationMesg}}</label><br *ngIf="skillValidationMesg!=''" />
+                            <label for="Skils">Language Skills<em class="text-danger">*</em>:</label>
+                            <div class="input-group">
+                                <div *ngFor="let data of listLanguageSkils; let i=index">
+                                    <label>
+                                      <input type="checkbox" id="checkbox_{{i}}" [(ngModel)]="data.isChecked" [ngModelOptions]="{standalone: true}" class="m-1" (change)="onCheckSkillChange($event,data)" />
+                                      {{data.skillName}}
+                                    </label>
+                                  </div>
+
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="DOB">Date Of Birth<em class="text-danger">*</em>:</label>
+                            <div class="input-group">
+                                <input
+                                id="DOB"
+                                class="form-control"
+                                placeholder="yyyy-mm-dd"
+                                formControlName="dateOfBirth"
+                                name="dp"
+                                type="datetime-local"
+                            />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fullName">Resume Upload:</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" (change)="onFileChanges($event)" id="fileUpload">
+                                <small *ngIf="errorMsg.length>0">{{errorMsg}}</small>
+                            </div>
+                        </div>
+                    </form>
+                    <button type="submit" class="btn btn-success btn-md" form="pForm"  (click)="onSubmit();" [disabled]="!f.valid"><i class="fa fa-save"></i> Submit</button>
+
+                </div>
+             </div>
+			</ng-template>
+		</li>
+		
+	</ul>
+
+	<div [ngbNavOutlet]="nav" class="ms-4"></div>
+</div>
+<ng-template #infoModal let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Personal Information</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<form>
+			<div class="mb-3">
+				<label for="fullName">Name:</label>
+				<div class="input-group">
+                    <label id="fullname" class="text-info">{{pInfo.fullName}}</label>
+				</div>
+			</div>
+            <div class="mb-3">
+				<label for="Country">Country:</label>
+				<div class="input-group">
+                    <label id="Country" class="text-info">{{pInfo.countryName}}</label>
+				</div>
+			</div>
+            <div class="mb-3">
+				<label for="Country">City:</label>
+				<div class="input-group">
+                    <label id="Country"class="text-info">{{pInfo.cityName}}</label>
+				</div>
+			</div>
+            <div class="mb-3">
+				<label for="DOB">Date Of Birth:</label>
+				<div class="input-group">
+                    <label id="DOB" class="text-info">{{pInfo.dateOfBirth | date:'MM/dd/yyyy'}}</label>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-danger" (click)="modal.close('Save click')">Close</button>
+	</div>
+</ng-template>
+<ng-template #confirmModal let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Personal Information</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<form>
+			<div class="mb-3">
+				<label class="text-info">Are you sure to delete this record?</label>				
+			</div>            
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-danger" (click)="modal.close('Save click')">No</button>
+        <button type="button" class="btn btn-outline-success" (click)="deleteInformation();modal.close('Save click')">Yes</button>
+	</div>
+</ng-template>
