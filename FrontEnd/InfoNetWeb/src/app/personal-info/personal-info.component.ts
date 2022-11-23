@@ -4,6 +4,7 @@ import { icon } from '@fortawesome/fontawesome-svg-core';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PagerService } from '../shared/pagerservice';
 import { ServiceService } from '../shared/service.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-personal-info',
   templateUrl: './personal-info.component.html',
@@ -45,7 +46,8 @@ export class PersonalInfoComponent implements OnInit {
     private modalService: NgbModal,
     private formBuilder: FormBuilder,
     private _dataService: ServiceService,
-    private pagerService: PagerService
+    private pagerService: PagerService,
+    private toastr: ToastrService
     ) {
             this.pageSizeList = this.pagerService.pageSize();
     }
@@ -262,19 +264,21 @@ setPagingToGetAll(page: number, isPaging: boolean) {
         this._dataService.updateFormWithFormData(formData, this._updatePersonalInfoUrl)
         .subscribe(response => {
             this.res = response;
-            if (this.res.resdata.isSuccess) {              
-               this.skillValidationMesg='';
-              
+            if (this.res.resdata.isSuccess) 
+            {              
+                this.skillValidationMesg='';
+                this.toastr.success(this.res.resdata.message,'Success!');
                 this.files = [];
                 this.active='list';
                 this.loadPersonalInfo(0,true);
             }
             else {                
-              
+              this.toastr.error(this.res.resdata.message,'Failed!');
             }
         }, error => {
            
             console.log(error);
+            this.toastr.error('Error occurred.','Failed!');
             this.files = [];
         });
       }else{
@@ -282,13 +286,13 @@ setPagingToGetAll(page: number, isPaging: boolean) {
         .subscribe(response => {
             this.res = response;
             if (this.res.resdata.isSuccess) {
-               
+              this.toastr.success(this.res.resdata.message,'Success!');
                 this.files = [];
                 this.active='list';
                 this.loadPersonalInfo(0,true);
             }
             else {
-              
+              this.toastr.error(this.res.resdata.message,'Failed!');
             }
         }, error => {
            

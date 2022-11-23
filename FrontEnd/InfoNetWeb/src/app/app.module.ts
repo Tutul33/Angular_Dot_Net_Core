@@ -9,7 +9,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ToastrModule } from 'ngx-toastr';
+import { Observable,Subject,of } from 'rxjs';
 const routesPath=[
   {path: '', component: PersonalInfoComponent},
   {path: 'personal-info', component: PersonalInfoComponent}
@@ -36,6 +37,7 @@ const routesPath=[
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]
